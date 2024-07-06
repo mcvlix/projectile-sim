@@ -8,7 +8,7 @@
     <meta property="og:description" content="Deploy in a VR Headset for the full experience." />
     <meta property="og:type" content="website" />
 
-    <title>Dini's Surface - MCVLIX</title>
+    <title>Projectile Simulation</title>
 
     <link rel="stylesheet" href="style.css"/>
 
@@ -19,48 +19,32 @@
 
 </head>
 <body>
-    <h1 class="header-text">Dini's Surface (Animated)</h1>
-    <h2 class="header-subtitle">MCVLIX COLLECTIVE</h2>
-
-    <!-- Image links -->
-    <!-- <a class="image-link" href="https://linkedin.com/in/mcvlix" style="left: 320px;">
-        <img class="social-icon" src="static/icons/linkedin.svg" alt="GitHub">
-    </a>
-    <a class="image-link" href="https://discord.gg/yzxh5RyfS2" style="left: 360px;">
-        <img class="social-icon" src="static/icons/discord.svg" alt="Discord">
-    </a>
-    <a class="image-link" href="https://github.com/mcvlix" style="left: 400px;">
-        <img class="social-icon" src="static/icons/github.svg" alt="GitHub">
-    </a> -->
+    <h1 class="header-text">Projectile Simulation</h1>
+    <h2 class="header-subtitle">
+        <a href="https://mcvlix.github.io" 
+        style="color: #ffffff; text-decoration: none">
+        MCVLIX COLLECTIVE</a>
+    </h2>
 
     <div id="overlay" style="top: 12%;">
         <div class="project-box" id="pbmain" style="left: 2px" onclick="toggleProjectBoxes()">
-            <h1>Dini's Surface</h1>
+            <h1>Velocity in 2D</h1>
 
             
-            <h2> A parametric curve defined by the twisting of a pseudosphere. Also the first figure I visualized in WebGL using vertex and fragment shaders.</h2>
-            <h2>Its 3D coordinates are with 4 parameters: \(a,b,u,v\)</h2>
-
+            <h2>Some text and math about the velocity of a projectile.</h2>
             <h2>
             \[ x = acos(u)sin(v) \]
-            \[ y = asin(u)cos(v) \]
-            \[ z = a\left(cos(v)+lntan(\frac{v}{2})\right) + bu\]
             </h2>
             
-            <h2>In this animation:
+            <!-- <h2>In this animation:
                 \(a\) (spiral width) is animated,
                 \(b\) (vertical spread) is constant, 
                 upper limit \(u\) animated synchronously with a,
-                and lower limit \(v\) is constant.</h2>
+                and lower limit \(v\) is constant.</h2> -->
 
             <footer>Click to rotate view. Shift+Click to pan.</footer>
-        </div>
-        <!-- <div class="project-box" id="pbcalc" style="top: auto; left: 2px">
-            <h1>3D Graphing Calculator in Virtual Reality</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</h2>
-            <footer>Fall 2024 - Present</footer>      
-        </div>    -->
-
+        </div> 
+        
     </div>
         
     <script>
@@ -75,4 +59,11 @@
 
     <canvas class="webgl"></canvas>
 </body>
+<body>
+    <div class="project-box" id="pbcalc" style="position: absolute; top: 0; right: 2px">
+        <h1>Interactive Box</h1>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</h2>  
+    </div>  
+</body>
+
 </html>

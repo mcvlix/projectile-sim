@@ -99,7 +99,7 @@ export default class Experience {
     this.mouse = new THREE.Vector2();
   
     this.scene.traverse((child) =>{
-      if (child.name === "Dini") {
+      if (child.name === "projectile") {
         this.dini = child
       }
     })
@@ -119,23 +119,6 @@ export default class Experience {
     //change this to be controller if controller is active
     this.raycaster.setFromCamera(this.mouse, this.camera.instance);
 
-    this.intersects = this.raycaster.intersectObjects( this.dini );
-    if(this.intersects.length)
-      {
-          if(!this.currentIntersect)
-          {
-              console.log('mouse enter')
-          }
-          this.currentIntersect = this.intersects[0]
-      }
-      else
-      {
-          if(this.currentIntersect)
-          {
-              console.log('mouse leave')
-          }
-          this.currentIntersect = null
-      }
   }
 
   destroy() {

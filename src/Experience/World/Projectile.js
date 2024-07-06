@@ -1,16 +1,11 @@
 import * as THREE from 'three'
 import Experience from '../Experience.js'
 
-import diniVertexShaders from '../../shaders/dini/vertex.glsl'
-import diniFragmentShaders from '../../shaders/dini/fragment.glsl'
-
-// import Audio from '../Utils/Audio.js'
-
-export default class Dini
+export default class Projectile
 {
     constructor()
     {
-        this.name = 'Dini'
+        this.name = 'Projectile'
         this.experience = new Experience()
         this.scene = this.experience.scene
         this.resources = this.experience.resources
@@ -25,7 +20,7 @@ export default class Dini
 
     setGeometry()
     {
-        this.geometry = new THREE.BoxGeometry(1,1,1,100, 20, 200)
+        this.geometry = new THREE.TorusKnotGeometry()
         // this.geometry = new THREE.PlaneGeometry(1,1,100,100)
     }
 
@@ -37,19 +32,7 @@ export default class Dini
     setMaterial()
     {
         // this.material = new THREE.MeshNormalMaterial({side: THREE.DoubleSide, wireframe: true})
-        this.material = new THREE.ShaderMaterial({
-            vertexShader: diniVertexShaders,
-            fragmentShader: diniFragmentShaders,
-            uniforms:{
-                uTime: {value: 0},
-                // animSpeed: {value: 10},
-                // 
-                width: {value: 2.0},
-                totalRadians: {value: 6.0},
-            },
-            wireframe: true,
-            transparent: false
-        })
+        this.material = new THREE.MeshNormalMaterial()
     }
     setMesh()
     {
@@ -60,7 +43,7 @@ export default class Dini
         this.scene.add(this.mesh)
 
         this.mesh.scale.y = 1.0
-        this.mesh.position.y = -1
+        this.mesh.position.y = 1
     }
     
     update() 

@@ -18,7 +18,7 @@ export default class Floor{
         });
         this.floorPlane = new THREE.Mesh( this.geometry, this.horizontalGridMaterial );
         this.floorPlane.x -= 15
-        this.floorPlane.position.y = -5
+        this.floorPlane.position.y = 0
         this.floorPlane.z -=15
         this.floorPlane.rotation.x -= Math.PI/2;
         this.scene.add( this.floorPlane );

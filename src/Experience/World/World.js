@@ -2,7 +2,7 @@ import * as THREE from "three";
 import Experience from "../Experience.js";
 import Environment from "./Environment.js";
 import Floor from "./Floor.js";
-import Dini from "./Dini.js";
+import Projectile from "./Projectile.js";
 
 export default class World {
   constructor() {
@@ -13,7 +13,7 @@ export default class World {
 
     // Objects
     this.floor = new Floor();
-    this.dini = new Dini();
+    this.projectile = new Projectile();
 
     // Wait for resources
     this.ready = false;
@@ -30,7 +30,7 @@ export default class World {
   update() {
     // // Bug in the ready function
     
-      this.dini.update();
+      // this.Projectile.update();
     
   }
 }

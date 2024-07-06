@@ -10,7 +10,7 @@ export default class Environment {
     this.scene.background = new THREE.Color("beige");
     // this.setSunLight()
     this.setAmbientLight();
-    // this.setEnvironmentMap()
+    this.setEnvironmentMap()
   }
   setAmbientLight() {
     this.ambientLight = new THREE.AmbientLight("#ffffff", 2.0);
@@ -60,52 +60,14 @@ export default class Environment {
   //     }
   // }
 
-  // setEnvironmentMap()
-  // {
-  //     this.environmentMap = {}
-  //     this.environmentMap.intensity = 9.4
-  //     this.environmentMap.texture = this.resources.items.environmentMapTexture
-  //     this.environmentMap.texture.encoding = THREE.sRGBEncoding
-  //     this.scene.environment = this.environmentMap.texture
-  //     this.environmentMap.updateMaterials = () =>
-  //     {
-  //         this.scene.traverse((child) =>
-  //         {
-  //             if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
-  //             {
-  //                 // console.log(child)
-  //                 child.geometry.setAttribute('uv2', new THREE.BufferAttribute(child.geometry.attributes.uv.array, 2))
-  //                 child.material.map = this.resources.items.iceColorTexture
-  //                 child.material.aoMap = this.resources.items.iceAmbientOcclusionTexture
-  //                 child.material.aoMapIntensity = 1
-  //                 child.material.envMap = this.resources.items.iceHeightTexture
-  //                 // displacement didn't work because I toggle wirefames to indicate dead cell state, increased subdivisions made dense wireframes
-  //                 // child.material.displacementScale = 0.05
-  //                 // child.material.displacementMap = this.resources.items.iceHeightTexture
-  //                 child.material.metalnessMap = this.resources.items.iceMetalnessTexture
-  //                 child.material.roughnessMap = this.resources.items.iceRoughnessTexture
-  //                 child.material.normalMap = this.resources.items.iceNormalTexture
-  //                 child.material.normalScale.set(0.2, 0.2)
-  //                 // child.material.transparent = true
-  //                 // child.material.alphaMap = this.resources.items.iceColorTexture
-
-  //                 //fabric texture, unused
-  //                 // child.material.map = this.resources.items.fabricColorTexture
-  //                 // child.material.aoMap = this.resources.items.fabricAmbientOcclusionTexture
-  //                 // child.material.aoMapIntensity = 1
-  //                 // // child.material.envMap = this.resources.items.fabricHeightTexture
-  //                 // // // child.material.displacementScale = 0.05
-  //                 // // child.material.displacementMap = this.resources.items.fabricHeightTexture
-  //                 // child.material.metalnessMap = this.resources.items.fabricMetalnessTexture
-  //                 // child.material.roughnessMap = this.resources.items.fabricRoughnessTexture
-  //                 // child.material.normalMap = this.resources.items.fabricNormalTexture
-
-  //                 child.material.envMapIntensity = this.environmentMap.intensity
-  //                 child.material.needsUpdate = true
-  //             }
-  //         })
-  //     }
-  //     // this.environmentMap.updateMaterials()
+  setEnvironmentMap()
+  {
+      this.environmentMap = {}
+      this.environmentMap.intensity = 9.4
+      this.environmentMap.texture.encoding = THREE.sRGBEncoding
+      this.scene.environment = this.environmentMap.texture
+  }
+      // this.environmentMap.updateMaterials()
 
   //     // Debug
   //     // if(this.debug.active)

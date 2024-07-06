@@ -22,15 +22,13 @@ export default class Camera {
       0.1,
       1000
     );
-    this.instance.position.set(6, 2, 6);
-    this.instance.lookAt(0,0,0);
+    this.instance.position.set(1, 2, 10);
     this.scene.add(this.instance);
   }
   setOrbitControls() {
     this.controls = new OrbitControls(this.instance, this.canvas);
     this.controls.enableDamping = true;
-    this.controls.target = new THREE.Vector3(0, 1, 1);
-    this.controls.target = new THREE.Vector3(0, 0, 0);
+    this.controls.target = new THREE.Vector3(0, 2, 0);
   }
 
   resize() {

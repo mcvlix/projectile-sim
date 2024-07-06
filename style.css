@@ -41,11 +41,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #fff;
+    color: #606060;
     margin: 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
-    text-shadow: 2px 2px 3px rgba(95, 0, 0);
-    border-bottom: 2px solid ;
+    /* text-shadow: 2px 2px 3px rgb(114, 114, 114); */
+    border-bottom: 3px solid #606060;
   }
   
   /* Header subtitle style */
@@ -109,7 +109,7 @@
 
     pointer-events: auto;
     display: block;
-    position: relative;
+
 
     min-width: 30vw;
     width: 30vw;
@@ -177,7 +177,7 @@
     height: auto;
     }
   #pbmain h1 {
-    border-image: linear-gradient(to left, #ff4d00, #e5e52e, #5fe52e, #2edfe5, #432ee5, #c32ee5, #e52e2e);
+    border-image: red;
     border-image-slice: 1;
     }
 
